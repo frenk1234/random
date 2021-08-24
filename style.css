@@ -3,3 +3,34 @@
   padding: 0;
   border: 0;
 }
+
+.seasons {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.season-card {
+  display: block;
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(47, 46, 46, 0.469);
+  opacity: 0.7;
+  background-size: cover;
+  margin: 10px 5%;
+  z-index: 100;
+}
+
+.season-card a {
+  text-decoration: none;
+  color: rgb(30, 30, 30);
+  z-index: 10;
+  text-transform: uppercase;
+}
