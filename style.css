@@ -4,6 +4,50 @@
   border: 0;
 }
 
+header {
+  min-height: 2vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+}
+
+.logo {
+  color: rgb(20, 19, 19);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(26, 25, 25);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-family: "gopher", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+}
+
 .seasons {
   display: flex;
   flex-wrap: wrap;
@@ -33,4 +77,75 @@
   color: rgb(30, 30, 30);
   z-index: 10;
   text-transform: uppercase;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  gap: 2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.product-list h2 {
+  grid-column: 1/-1;
+}
+
+.product-list article h3 {
+  font-size: 1rem;
+  flex-grow: 3;
+}
+.product-list article > * {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.product-sale h3 {
+  font-size: 1rem;
+  flex-grow: 3;
+}
+.product-type {
+  color: #d8d8d8cc;
+}
+.product-list article {
+  display: flex;
+  flex-direction: column;
+}
+.product-list article.product-out img {
+  opacity: 0.5;
+}
+.product-list article.product-out::before {
+  content: "Sold Out";
+  position: absolute;
+  background: var(--color);
+  color: var(--background-color);
+  padding: 1rem;
+}
+.product-list article .discounted,
+.product-list article .price span {
+  display: none;
+}
+.product-list article.product-sale .discounted {
+  display: flex;
+  justify-content: space-between;
+}
+.discounted > p {
+  margin-bottom: 0;
+}
+.product-list article.product-sale .price span {
+  display: initial;
+}
+.product-list article button {
+  margin-top: auto;
+}
+.product-list article {
+  margin-bottom: 1rem;
+}
+.discounted p:last-child {
+  background: var(--off-color);
+  padding: 0.2rem;
 }
